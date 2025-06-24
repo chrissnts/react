@@ -1,0 +1,15 @@
+.button{
+    display: 'inline';
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    padding: 25px;
+}
+
+.font{
+    font-size: 20px;
+    display: inline;
+}
