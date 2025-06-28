@@ -5,8 +5,8 @@ export default class Mega extends React.Component {
         super(props)
         this.state = {
             title: "Sorteando Numeros...",
-            numbers: [],
-        }
+            numbers:[],
+        };
     }
 
     generateRandNumbers() {
@@ -23,11 +23,10 @@ export default class Mega extends React.Component {
     }
 
 
-    componentDidUpdate(prevState, prevProps) {
-
+    componentDidUpdate(prevProps, prevState) {
         for(let  i = 0; i < 6; i++){
-            for(let j = 0; j < 6; j++ ){
-                if(this.state.number[i] == this.state.numbers[j]){
+            for(let j = i+1; j < 6; j++ ){
+                if(this.state.numbers[i] == this.state.numbers[j]){
                     this.setState({
                         numbers: this.generateRandNumbers(),
                     });
@@ -35,21 +34,15 @@ export default class Mega extends React.Component {
                 }
             }
         }
-
     }
 
-
     componentDidMount() {
-
         setTimeout(() => {
             this.setState({
                 title: "Números Sorteados:",
                 numbers: this.generateRandNumbers(),
             });
         }, 3000);
-
-
-
     }
 
     render(){

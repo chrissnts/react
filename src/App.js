@@ -4,7 +4,8 @@ import Welcome from './components/welcome';
 import Link from './components/link';
 import Counter from './components/counter';
 import List from './components/list'
-import Mega from './components/mega'
+import Mega from './components/mega';
+import Clientes from './components/clientes';
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
       <Counter val ="0" />
       <List/>
       <Mega/>
+      <Clientes/>
+
       
     </div>
   );
